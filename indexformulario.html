@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+</head>
+<body>
+    <h1>Formulario de registro curso</h1>
+    <form action="servidor.php" method="post">
+<!-- enmarcamos los datos personales para dejarlos agrupados-->
+    <fieldset>
+            <legend>Datos personales</legend>
+<!-- nombre-->
+        <label for="name">Nombre de usuario:</label>
+        <input type="text" name="nombre" id="name" placeholder="Aquí tu nombre"><br><br>
+        
+<!-- Teléfono-->
+        <label for="telf">Teléfono</label>
+         <input type="tel" name="Teléfono" id="telf"><br><br>
+         
+<!-- Fecha de nacimiento-->
+         <label for="birthdate">Fecha de nacimiento:</label>
+        <input type="date" id="birthdate" name="birthdate"><br><br>
+
+
+<!--desplegable de grupos de género-->
+        <label for="genero">Género:</label>
+        
+        <select name="genero" id="genero">
+            <option value="mujer">Mujer</option>
+            <option value="hombre">Hombre</option>
+            <option value="nobin">No binario</option>
+            <option value="fluido">Género fluido</option>
+        </select>
+
+    </fieldset>
+
+    <fieldset>
+         <legend>Registro</legend>
+<!--email-->       
+       <label for="email">Correo electrónico:</label>
+        <input type="email" name="email" id="email" ><br><br>
+
+<!-- contraseña -->
+        <label for="contraseña">Contreseña</label>
+         <input type="password" name="contraseña" id="contraseña" placeholder="Min.8 caracteres">
+       <br><br>
+
+    </fieldset>
+
+<br><br>
+
+<!-- Elemento de rango -->
+        <label for="customRange">Años de experiencia laboral</label><br>
+        <!--esto lo pongo como párrafo porque no consigo poner los números directamente en
+            la barra de range para que se vean visualmente -->
+            <p>1-------5-------10-------20</p> 
+        <input type="range" name="customRange" id="customRange" value="1" min="1" max="4" step="1" list="valores"><br><br>
+    
+    
+        <!--supuestamente el datalist debería hacer que se vean los números enel rango -->  
+     
+     <datalist id="valores">
+            <option value="1">1</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">10</option>
+
+        </datalist>  
+
+
+<!--Idiomas-->
+        <label><em><b>Idiomas que hablas:</b></em></label><br>
+
+        <label for="spanish">Español</label>
+         <input type="checkbox" id="spanish" name="idioma" value="Spanish"><br>
+    
+        <label for="english">Inglés</label>
+         <input type="checkbox" id="english" name="idioma" value="English"> <br>
+
+        <label for="german">Alemán</label>
+         <input type="checkbox" id="german"name="German" value="german" > <br><br>
+
+<!--selector tipo radio-->
+    <h3>Otros datos</h3>
+        <label>Vehículo propio:</label>
+        <input type="radio" name="opcion" value="si">SI <input type="radio" name="opcion" value="no">NO
+<br>
+<br>
+
+
+ <!-- Textarea para poder escribir--> 
+
+<label for="bio"><strong>Biografía:</strong></label><br>
+ <textarea name="bio" id="bio" cols="30" rows="10"></textarea><br><br>
+
+
+ <!-- botón para enviar-->
+
+ <button type="submit">Enviar</button>
+
+    </form>
+</body>
+</html>
